@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EFFBFC72-4ED4-412C-9278-FC12DE2EE90D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Football</RootNamespace>
+    <AssemblyName>Football</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Anasayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Anasayfa.Designer.cs">
+      <DependentUpon>Anasayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Deneme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Deneme.Designer.cs">
+      <DependentUpon>Deneme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FootballDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FootballDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GirisEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GirisEkrani.Designer.cs">
+      <DependentUpon>GirisEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadingEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingEkrani.Designer.cs">
+      <DependentUpon>LoadingEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MacEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MacEkrani.Designer.cs">
+      <DependentUpon>MacEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MacMotoru.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Kadro.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Kadro.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PuanDurumu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PuanDurumu.Designer.cs">
+      <DependentUpon>PuanDurumu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Taktik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Taktik.Designer.cs">
+      <DependentUpon>Taktik.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Anasayfa.resx">
+      <DependentUpon>Anasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Deneme.resx">
+      <DependentUpon>Deneme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GirisEkrani.resx">
+      <DependentUpon>GirisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingEkrani.resx">
+      <DependentUpon>LoadingEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MacEkrani.resx">
+      <DependentUpon>MacEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PuanDurumu.resx">
+      <DependentUpon>PuanDurumu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Taktik.resx">
+      <DependentUpon>Taktik.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="FootballDataSet.xsc">
+      <DependentUpon>FootballDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FootballDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FootballDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FootballDataSet.xss">
+      <DependentUpon>FootballDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Kadro.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Kadro.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon\asist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon\Butce.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon\Defans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon\F-Forma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon\forma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon\gol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon\Hucum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon\K-Forma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon\kirmizi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon\kirmizi1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon\Ortasaha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon\sari.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon\sari1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon\secilebilir-forma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon\secili-forma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon\Stadyum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon\TeknikDirektor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon\zemin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon\SonrakiMac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon\MacOynaniyor.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon\surukle-birak.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

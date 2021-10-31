@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# IDE0047: Gereksiz parantezleri kaldırın
+dotnet_diagnostic.IDE0047.severity = none
